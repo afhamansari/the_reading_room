@@ -1,0 +1,20 @@
+[
+    {
+        "name": "John Doe",
+        "photo": "images/john.jpg",
+        "contact": "john.doe@example.com",
+        "contributions": "Built the website and managed content updates."
+    },
+    {
+        "name": "Jane Smith",
+        "photo": "images/jane.jpg",
+        "contact": "jane.smith@example.com",
+        "contributions": "Curated the library collection and organized events."
+    },
+    {
+        "name": "Alice Johnson",
+        "photo": "images/alice.jpg",
+        "contact": "alice.johnson@example.com",
+        "contributions": "Handled digital archives and managed IT infrastructure."
+    }
+]

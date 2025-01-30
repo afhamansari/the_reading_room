@@ -1,0 +1,122 @@
+[
+  {
+      "id": "1",
+      "title": "The Great Adventure",
+      "author": "John Doe",
+      "genre": "Adventure",
+      "availability": "Available",
+      "pageLength": 320,
+      "description": "A thrilling adventure across the seas.",
+      "synopsis": "Follow the journey of a young explorer as they embark on an unforgettable adventure across mysterious lands and dangerous seas.",
+      "reviews": ["Amazing read!", "Couldn’t put it down!"],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "2",
+      "title": "Mystery in the Shadows",
+      "author": "Jane Smith",
+      "genre": "Mystery",
+      "availability": "Available",
+      "pageLength": 280,
+      "description": "A gripping mystery novel with twists and turns.",
+      "synopsis": "A detective tries to unravel a series of mysterious events that seem to lead to an unsolvable crime.",
+      "reviews": ["Keeps you on the edge of your seat!", "A masterpiece of suspense."],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "3",
+      "title": "The Silent Forest",
+      "author": "Emily Johnson",
+      "genre": "Horror",
+      "availability": "Unavailable",
+      "pageLength": 240,
+      "description": "A chilling story set in a haunted forest.",
+      "synopsis": "When a group of friends venture into an eerie forest, they discover that the spirits of the past still haunt the woods.",
+      "reviews": ["Very spooky!", "Perfect for horror lovers."],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "4",
+      "title": "Beyond the Stars",
+      "author": "Michael Brown",
+      "genre": "Science Fiction",
+      "availability": "Available",
+      "pageLength": 350,
+      "description": "An intergalactic journey to unknown worlds.",
+      "synopsis": "Join a space crew on a mission to explore the far reaches of the universe, encountering alien species and unknown dangers.",
+      "reviews": ["A thrilling space adventure!", "The perfect blend of science and fiction."],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "5",
+      "title": "The Time Traveler's Paradox",
+      "author": "Alice Davis",
+      "genre": "Science Fiction",
+      "availability": "Available",
+      "pageLength": 410,
+      "description": "A tale of time travel and its consequences.",
+      "synopsis": "A scientist accidentally invents a time machine and must navigate the paradoxes that arise as they try to undo their mistakes.",
+      "reviews": ["Mind-blowing!", "Brilliantly written with a thought-provoking plot."],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "6",
+      "title": "The Last Kingdom",
+      "author": "Robert Lee",
+      "genre": "Fantasy",
+      "availability": "Unavailable",
+      "pageLength": 500,
+      "description": "A medieval fantasy epic about kingdoms at war.",
+      "synopsis": "In a land torn by war, a young warrior must rise up and fight to protect their kingdom from an invading empire.",
+      "reviews": ["A captivating epic!", "Full of action and magic."],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "7",
+      "title": "Whispers in the Wind",
+      "author": "Laura Clark",
+      "genre": "Romance",
+      "availability": "Available",
+      "pageLength": 300,
+      "description": "A heartwarming love story that defies the odds.",
+      "synopsis": "Two people from different worlds fall in love and must overcome obstacles in their path to be together.",
+      "reviews": ["A beautiful love story!", "Heartfelt and emotional."],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "8",
+      "title": "The Battle of Souls",
+      "author": "David Wilson",
+      "genre": "Fantasy",
+      "availability": "Available",
+      "pageLength": 400,
+      "description": "A powerful battle between light and dark.",
+      "synopsis": "A group of heroes must come together to stop an ancient evil from taking over the world.",
+      "reviews": ["Epic fantasy!", "A must-read for fans of high fantasy."],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "9",
+      "title": "City of Lies",
+      "author": "Sophie Martin",
+      "genre": "Thriller",
+      "availability": "Available",
+      "pageLength": 320,
+      "description": "A fast-paced thriller about corruption in a big city.",
+      "synopsis": "A journalist uncovers a deep conspiracy within the city's government and must fight to expose the truth.",
+      "reviews": ["Thrilling and intense!", "Kept me guessing until the end."],
+      "image": "the_great_gatsby.jpg"
+  },
+  {
+      "id": "10",
+      "title": "The Enchanted Garden",
+      "author": "Mia Thompson",
+      "genre": "Fantasy",
+      "availability": "Unavailable",
+      "pageLength": 220,
+      "description": "A magical tale set in an enchanted garden.",
+      "synopsis": "A young girl discovers a hidden garden where magical creatures live, and she must protect it from a dangerous force.",
+      "reviews": ["Enchanting and magical!", "A delightful read."],
+      "image": "the_great_gatsby.jpg"
+  }
+]

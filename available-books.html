@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>The Reading Room</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="available-books.html">Available Books</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services">
+            <h1>Available Books</h1>
+            <p>Explore our wide selection of books, available for lending and enjoyment. We also host a variety of events to engage our community and foster a love for reading.</p>
+
+            <!-- Filter Bar for Genres -->
+            <div id="filter-bar">
+                <select id="genre-filter">
+                    <option value="all">All Genres</option>
+                </select>
+            </div>
+
+            <!-- Books List -->
+            <div id="books-list" class="books-list"></div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const booksList = document.getElementById('books-list');
+            const genreFilter = document.getElementById('genre-filter');
+
+            // Fetch the books data from a JSON file
+            fetch('books.json')
+                .then(response => response.json())
+                .then(books => {
+                    // Extract genres from the books data and populate the filter dropdown
+                    const genres = new Set();
+                    books.forEach(book => genres.add(book.genre));
+
+                    // Populate the genre filter dropdown
+                    genres.forEach(genre => {
+                        const option = document.createElement('option');
+                        option.value = genre;
+                        option.textContent = genre;
+                        genreFilter.appendChild(option);
+                    });
+
+                    // Display all books initially
+                    displayBooks(books);
+
+                    // Add event listener for genre filter dropdown
+                    genreFilter.addEventListener('change', function () {
+                        const selectedGenre = this.value;
+                        const filteredBooks = selectedGenre === 'all' ? books : books.filter(book => book.genre === selectedGenre);
+                        displayBooks(filteredBooks);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error loading the books JSON:", error);
+                });
+
+            function displayBooks(books) {
+                booksList.innerHTML = ''; // Clear current books
+
+                books.forEach(book => {
+                    const bookElement = document.createElement('div');
+                    bookElement.classList.add('book');
+                    const availabilityClass = book.availability.toLowerCase().replace(/\s+/g, '-');  // Ensure class is in lowercase and replace spaces with dashes
+                    bookElement.innerHTML = `
+                        <img src="${book.image}" alt="${book.title}">
+                        <h3>${book.title}</h3>
+                        <p>by ${book.author}</p>
+                        <p class="availability ${availabilityClass}">${book.availability}</p>
+                    `;
+
+                    // Add click event listener to each book tile
+                    bookElement.addEventListener('click', () => {
+                        displayBookDetails(book);
+                    });
+
+                    booksList.appendChild(bookElement);
+                });
+            }
+
+            function displayBookDetails(book) {
+                // Create a new section for the book details, without replacing the entire body
+                const bookDetailsPage = document.createElement('div');
+                bookDetailsPage.classList.add('book-details');
+                const availabilityClass = book.availability.toLowerCase().replace(/\s+/g, '-');  // Ensure class is in lowercase and replace spaces with dashes
+
+                bookDetailsPage.innerHTML = `
+                    <button id="back-button">Back</button>
+                    <img src="${book.image}" alt="${book.title}">
+                    <h1>${book.title}</h1>
+                    <p><strong>Author:</strong> ${book.author}</p>
+                    <p><strong>Genre:</strong> ${book.genre}</p>
+                    <p><strong>Page Length:</strong> ${book.pageLength} pages</p>
+                    <p><strong>Description:</strong> ${book.description}</p>
+                    <p><strong>Synopsis:</strong> ${book.synopsis}</p>
+                    <h2>Reviews</h2>
+                    <ul class="reviews-list">
+                        ${book.reviews.map(review => `<li>"${review}"</li>`).join('')}
+                    </ul>
+
+                    <!-- Button based on availability status -->
+                    <button id="availability-button" class="${availabilityClass}">
+                        ${book.availability === 'Available' ? 'Get' : 'Unavailable'}
+                    </button>
+                `;
+
+                // Append the book details to the existing page, instead of replacing everything
+                const mainSection = document.querySelector('main');
+                mainSection.innerHTML = ''; // Clear existing content in the main section
+                mainSection.appendChild(bookDetailsPage);
+
+                // Add functionality to the back button
+                const backButton = document.getElementById('back-button');
+                backButton.addEventListener('click', () => {
+                    window.history.back(); // Go back to the previous page
+                });
+
+                // Add functionality to the availability button (for the "Get" button)
+                const availabilityButton = document.getElementById('availability-button');
+                if (availabilityButton) {
+                    availabilityButton.addEventListener('click', () => {
+                        if (book.availability === 'Available') {
+                            console.log('Get button clicked');
+                            localStorage.setItem('bookRequested', JSON.stringify(book));  // Save book details to localStorage
+                            window.location.href = 'book-request-form.html';  // Redirect to form page
+                        } else {
+                            alert('This book is currently unavailable');
+                        }
+                    });
+                } else {
+                    console.error('Get button not found');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
