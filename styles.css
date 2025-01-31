@@ -6,13 +6,14 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Light grey background for a modern touch */
+    font-family: 'Patrick Hand', cursive; /* Readable handwriting font for body text */
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
+    font-family: 'Gloria Hallelujah', cursive; /* Fun and readable handwriting font for headers */
     font-weight: 600;
 }
 
@@ -22,102 +23,78 @@ a {
 }
 
 header {
-    background-color: #fff; /* White header for contrast */
+    font-family: 'Patrick Hand', cursive;
+    background-color: #fff;
     padding: 30px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li a {
+    font-family: 'Patrick Hand', cursive;
     font-size: 16px;
     color: #333;
     padding: 8px 12px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: #333; /* Dark hover effect */
-    color: #fff; /* White text on hover */
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    margin-top: 50px;
-}
-
 footer p {
+    font-family: 'Patrick Hand', cursive;
     font-size: 14px;
 }
 
 /* Main Content */
 main {
+    font-family: 'Patrick Hand', cursive;
     padding: 60px 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-/* Home Page Section */
-section {
-    margin-bottom: 60px;
-}
-
 section h1 {
+    font-family: 'Gloria Hallelujah', cursive;
     font-size: 32px;
     margin-bottom: 20px;
     color: #333;
 }
 
 section p {
+    font-family: 'Patrick Hand', cursive;
     font-size: 18px;
     color: #555;
 }
 
 /* Available Books (Services Page) */
-#books-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.book {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.book img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
 .book h3 {
+    font-family: 'Gloria Hallelujah', cursive;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .book p {
+    font-family: 'Patrick Hand', cursive;
     font-size: 14px;
     color: #777;
 }
+
+/* Available Books (Services Page) Filterbar*/
+#filter-bar {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 16px;
+}
+
+#genre-filter {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#availability-button {
+    font-family: 'Patrick Hand', cursive;
+}
+
 
 .book .availability {
     font-weight: bold;
@@ -335,38 +312,6 @@ section p {
     }
 }
 
-/* Instructions */
-.instructions {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.instructions h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.instructions p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.instructions ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #555;
-}
-
-.instructions ul li {
-    margin-bottom: 8px;
-    font-size: 1rem;
-}
 
 /* Introduction */
 .introduction {
@@ -388,28 +333,6 @@ section p {
     line-height: 1.6;
 }
 
-/* General Reset */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-/* Filter Bar */
-#filter-bar {
-    text-align: center;
-    margin: 20px 0;
-}
-
-#genre-filter {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
 
 /* Books Grid */
 .books-grid {
@@ -443,7 +366,6 @@ body {
     color: #777;
 }
 
-/* Book Details */
 /* General styling for the page */
 body {
     font-family: Arial, sans-serif;
