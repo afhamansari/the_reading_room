@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
-    <div class="header-container">
         <h1>The Reading Room</h1>
         <nav>
             <ul>
@@ -17,58 +17,90 @@
                 <li><a href="about-us.html">About Us</a></li>
             </ul>
         </nav>
-    </div>
-</header>
+    </header>
 
     <main>
-        <!-- Welcome Section -->
-        <section class="welcome">
-            <h1>Welcome to Our Library</h1>
-            <p>Your gateway to knowledge, inspiration, and community.</p>
-        </section>
-
-        <!-- Introduction Section -->
-        <section class="introduction">
-            <h2>Introduction</h2>
+        <!-- Introductory Section -->
+        <section class="about-us-intro">
+            <h1>About Us</h1>
             <p>
-                Our library offers a wide range of resources, from classic literature to modern bestsellers, and a variety of services to cater to all book enthusiasts. 
-                Whether you're looking to borrow a book, participate in our events, or just find a cozy place to read, we have something for everyone. 
-                Explore our collection, join our community, and experience the joy of learning.
+                Welcome to our modern library, a hub for book lovers and knowledge seekers. 
+                Our mission is to provide a cozy and inspiring space where you can explore 
+                a world of stories, ideas, and discoveries. From classic novels to the latest 
+                non-fiction, we curate a diverse collection to ignite your imagination and curiosity.
+            </p>
+            <p>
+                Beyond books, our library is a community space for events, learning, and collaboration. 
+                Whether you're here to browse, research, or connect with others, we strive to create an 
+                environment that feels both welcoming and inspiring.
             </p>
         </section>
 
-        <!-- Upcoming Events Section -->
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <p>Stay tuned for our latest events, workshops, and book signings!</p>
-            <div id="events-container">
-                <!-- Events will be dynamically loaded here -->
-            </div>
+        <!-- Contributors Section -->
+        <section>
+            <h2>Our Contributors</h2>
+            <p>Meet the amazing people who help us run the library and make it a wonderful space for everyone.</p>
+        </section>
+        
+        <section id="contributors">
+            <!-- Contributors will be dynamically loaded here -->
+        </section>
+
+        <!-- Share Your Books Section -->
+        <section class="share-books">
+            <h2>Share Your Books</h2>
+            <p>
+                Sharing books not only helps expand our library but also connects our community in meaningful ways. 
+                Whether you have a classic novel, an inspiring non-fiction, or a new release, your contribution can 
+                help someone else discover their next favorite read. Join us in spreading the joy of reading by sharing 
+                your books today!
+            </p>
+            <a href="book-submit-form.html">
+                <button>Share Your Book</button>
+            </a>
         </section>
     </main>
 
-    <script src="upcoming_events.js"></script>
     <script>
-        let touchStartX = 0;
-        let touchEndX = 0;
+        // Swipe gesture detection script
+        let startX;
+        let startY;
+        let threshold = 150;  // Minimum distance to detect a swipe
 
-        // Function to handle the swipe gesture
-        function handleSwipe() {
-            if (touchEndX < touchStartX) {
-                // Left swipe detected, redirect to available-books.html
-                window.location.href = 'available-books.html';
+        // Function to handle swipe events
+        function handleSwipe(event) {
+            const touch = event.touches[0];
+            const endX = touch.pageX;
+            const endY = touch.pageY;
+
+            // Calculate swipe distance
+            const diffX = endX - startX;
+            const diffY = endY - startY;
+
+            // Determine swipe direction
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > threshold) {
+                if (diffX > 0) {
+                    // Swipe right
+                    window.location.href = "index.html"; // Redirect to index.html
+                } else {
+                    // Swipe left
+                    window.location.href = "available-books.html"; // Redirect to available-books.html
+                }
             }
+
+            // Prevent default behavior of touch event
+            event.preventDefault();
         }
 
-        // Add event listeners for touch start and touch end
-        document.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
+        // Attach touchstart and touchmove event listeners
+        document.body.addEventListener("touchstart", (event) => {
+            const touch = event.touches[0];
+            startX = touch.pageX;
+            startY = touch.pageY;
         });
 
-        document.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
+        document.body.addEventListener("touchmove", handleSwipe);
     </script>
+
 </body>
 </html>
