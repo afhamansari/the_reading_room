@@ -79,13 +79,8 @@
 
             // Determine swipe direction
             if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > threshold) {
-                if (diffX > 0) {
-                    // Swipe right
-                    window.location.href = "index.html"; // Redirect to index.html
-                } else {
-                    // Swipe left
-                    window.location.href = "available-books.html"; // Redirect to available-books.html
-                }
+                // Swipe right
+                window.location.href = "available-books.html"; // Redirect to index.html
             }
 
             // Prevent default behavior of touch event
