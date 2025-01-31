@@ -148,31 +148,6 @@
                 }
             }
         });
-
-        // Swipe gesture detection for page navigation
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        // Function to handle the swipe gesture
-        function handleSwipe() {
-            if (touchEndX < touchStartX) {
-                // Left swipe detected, redirect to about-us.html
-                window.location.href = 'about-us.html';
-            } else if (touchEndX > touchStartX) {
-                // Right swipe detected, redirect to index.html
-                window.location.href = 'index.html';
-            }
-        }
-
-        // Add event listeners for touch start and touch end
-        document.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        document.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
     </script>
 </body>
 </html>
