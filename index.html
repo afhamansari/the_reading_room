@@ -20,6 +20,7 @@
     </div>
 </header>
 
+
     <main>
         <!-- Welcome Section -->
         <section class="welcome">
@@ -47,28 +48,7 @@
         </section>
     </main>
 
+
     <script src="upcoming_events.js"></script>
-    <script>
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        // Function to handle the swipe gesture
-        function handleSwipe() {
-            if (touchEndX < touchStartX) {
-                // Left swipe detected, redirect to available-books.html
-                window.location.href = 'available-books.html';
-            }
-        }
-
-        // Add event listeners for touch start and touch end
-        document.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        document.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-    </script>
 </body>
 </html>
