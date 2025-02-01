@@ -6,14 +6,14 @@
 }
 
 body {
-    font-family: 'Patrick Hand', cursive; /* Readable handwriting font for body text */
+    font-family: 'Patrick Hand', cursive; /* Mobile-friendly handwriting font */
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    font-family: 'Gloria Hallelujah', cursive; /* Fun and readable handwriting font for headers */
+    font-family: 'Quicksand', sans-serif; /* Clean and bold for headers */
     font-weight: 600;
 }
 
@@ -25,7 +25,7 @@ a {
 header {
     font-family: 'Patrick Hand', cursive;
     background-color: #fff;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -52,21 +52,49 @@ main {
 }
 
 section h1 {
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 32px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
     margin-bottom: 20px;
     color: #333;
 }
 
 section p {
     font-family: 'Patrick Hand', cursive;
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
 }
 
 /* Available Books (Services Page) */
 .book h3 {
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.book p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+
+    h1, h2, h3 {
+        font-size: 20px; /* Scale down headers for mobile */
+    }
+
+    section p, footer p {
+        font-size: 14px;
+    }
+}
+
+/* Available Books (Services Page) */
+.book h3 {
+    font-family: 'Patrick Hand', cursive;
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -79,12 +107,12 @@ section p {
 
 /* Available Books (Services Page) Filterbar*/
 #filter-bar {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Arial', cursive;
     font-size: 16px;
 }
 
 #genre-filter {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Arial', cursive;
     font-size: 14px;
     padding: 8px;
     border: 1px solid #ccc;
@@ -92,7 +120,7 @@ section p {
 }
 
 #availability-button {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Arial', cursive;
 }
 
 
