@@ -6,14 +6,14 @@
 }
 
 body {
-    font-family: 'Patrick Hand', cursive; /* Mobile-friendly handwriting font */
+    font-family: 'Patrick hand', cursive; /* Mobile-friendly handwriting font */
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    font-family: 'Quicksand', sans-serif; /* Clean and bold for headers */
+    font-family: 'Patrick hand', sans-serif; /* Clean and bold for headers */
     font-weight: 600;
 }
 
@@ -23,7 +23,7 @@ a {
 }
 
 header {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick hand', cursive;
     background-color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -31,7 +31,7 @@ header {
 }
 
 nav ul li a {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick hand', cursive;
     font-size: 16px;
     color: #333;
     padding: 8px 12px;
@@ -39,40 +39,40 @@ nav ul li a {
 }
 
 footer p {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick hand', cursive;
     font-size: 14px;
 }
 
 /* Main Content */
 main {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick hand', cursive;
     padding: 60px 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
 section h1 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Patrick hand', sans-serif;
     font-size: 28px;
     margin-bottom: 20px;
     color: #333;
 }
 
 section p {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick hand', cursive;
     font-size: 16px;
     color: #555;
 }
 
 /* Available Books (Services Page) */
 .book h3 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Patrick hand', sans-serif;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .book p {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick hand', cursive;
     font-size: 14px;
     color: #777;
 }
@@ -94,25 +94,25 @@ section p {
 
 /* Available Books (Services Page) */
 .book h3 {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick hand', cursive;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .book p {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick hand', cursive;
     font-size: 14px;
     color: #777;
 }
 
 /* Available Books (Services Page) Filterbar*/
 #filter-bar {
-    font-family: 'Arial', cursive;
+    font-family: 'Patrick hand', cursive;
     font-size: 16px;
 }
 
 #genre-filter {
-    font-family: 'Arial', cursive;
+    font-family: 'Patrick hand', cursive;
     font-size: 14px;
     padding: 8px;
     border: 1px solid #ccc;
@@ -120,7 +120,7 @@ section p {
 }
 
 #availability-button {
-    font-family: 'Arial', cursive;
+    font-family: 'Patrick hand', cursive;
 }
 
 
@@ -396,7 +396,7 @@ section p {
 
 /* General styling for the page */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Patrick hand, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
