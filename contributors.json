@@ -1,19 +1,19 @@
 [
     {
         "name": "John Doe",
-        "photo": "images/john.jpg",
+        "photo": "the_great_gatsby.jpg",
         "contact": "john.doe@example.com",
         "contributions": "Built the website and managed content updates."
     },
     {
         "name": "Jane Smith",
-        "photo": "images/jane.jpg",
+        "photo": "the_great_gatsby.jpg",
         "contact": "jane.smith@example.com",
         "contributions": "Curated the library collection and organized events."
     },
     {
         "name": "Alice Johnson",
-        "photo": "images/alice.jpg",
+        "photo": "the_great_gatsby.jpg",
         "contact": "alice.johnson@example.com",
         "contributions": "Handled digital archives and managed IT infrastructure."
     }
